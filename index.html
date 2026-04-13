@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碳酸锂价格走势 (2025.6 - 2026.4)</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 900px;
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #f97316, #fb923c);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: rgba(30, 41, 59, 0.6);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid rgba(100, 116, 139, 0.2);
+        }
+        
+        .stat-value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #f97316;
+            margin: 10px 0;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #94a3b8;
+        }
+        
+        .chart-wrapper {
+            position: relative;
+            height: 400px;
+            margin: 30px 0;
+        }
+        
+        .source {
+            text-align: center;
+            color: #64748b;
+            font-size: 12px;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(100, 116, 139, 0.3);
+        }
+        
+        .disclaimer {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #fca5a5;
+        }
+        
+        .dates {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 碳酸锂价格走势分析</h1>
+            <p>2025年6月 - 2026年4月 | 数据周期：10个月</p>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-label">最低点</div>
+                <div class="stat-value">5.9万</div>
+               <div class="stat-label">2025年6月</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-label">最高点</div>
+                <div class="stat-value">16.45万</div>
+                <div class="stat-label">2026年3月</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-label">涨幅</div>
+                <div class="stat-value">+179%</div>
+                <div class="stat-label">V型反转</div>
+            </div>
+        </div>
+        
+        <div class="chart-wrapper">
+            <canvas id="priceChart"></canvas>
+        </div>
+        
+        <div class="disclaimer">
+            ⚠️ 数据来源：新闻摘要（新浪、雪球、东方财富）· 非专业数据库实时价格 · 仅作趋势参考
+        </div>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('priceChart').getContext('2d');
+        const data = {
+            labels: ['25/06', '25/07', '25/08', '25/09', '25/10', '25/11', '25/12', '26/01', '26/02', '26/03', '26/04'],
+            datasets: [{
+                label: '碳酸锂价格 (万元/吨)',
+                data: [5.9, 7.0, 8.5, 10.2, 11.5, 12.8, 13.0, 16.0, 15.8, 16.45, 16.2],
+                borderColor: '#f97316',
+                backgroundColor: 'rgba(249, 115, 22, 0.1)',
+                pointBackgroundColor: '#f97316',
+                pointBorderColor: '#fff',
+                pointBorderWidth: 2,
+                pointRadius: 6,
+                pointHoverRadius: 8,
+                borderWidth: 3,
+                fill: true,
+                tension: 0.4,
+                cubicInterpolationMode: 'monotone'
+            }]
+        };
+        
+        const chart = new Chart(ctx, {
+            type: 'line',
+            data: data,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#fff',
+                            font: {
+                                size: 14
+                            }
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                        titleColor: '#f1f5f9',
+                        bodyColor: '#f1f5f9',
+                        borderColor: '#f97316',
+                        borderWidth: 1,
+                        callbacks: {
+                            label: (ctx) => `价格: ${ctx.parsed.y}万元/吨`
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        ticks: {
+                            color: '#94a3b8',
+                            font: {
+                                size: 13
+                            }
+                        },
+                        grid: {
+                            color: 'rgba(100, 116, 139, 0.2)'
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            color: '#94a3b8',
+                            font: {
+                                size: 13
+                            },
+                            callback: function(value) {
+                                return value + '万';
+                            }
+                        },
+                        grid: {
+                            color: 'rgba(100, 116, 139, 0.2)'
+                        }
+                    }
+                }
+            }
+        });
+        
+        chart.update();
+    </script>
+</body>
+</html>
