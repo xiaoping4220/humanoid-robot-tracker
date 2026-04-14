@@ -43,7 +43,6 @@
             margin: 0 auto;
         }
         
-        /* Header */
         header {
             text-align: center;
             padding: 48px 0 40px;
@@ -70,7 +69,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            letter-spacing: -0.5px;
         }
         
         .subtitle {
@@ -109,7 +107,6 @@
             50% { opacity: 0.4; }
         }
         
-        /* Tag badges */
         .tag {
             display: inline-flex;
             align-items: center;
@@ -135,7 +132,6 @@
             color: var(--secondary);
         }
         
-        /* Section */
         .section {
             margin: 40px 0;
         }
@@ -152,12 +148,8 @@
             font-weight: 600;
             color: var(--text-secondary);
             letter-spacing: 0.5px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
         }
         
-        /* Stocks Grid */
         .stocks-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -261,7 +253,6 @@
             font-size: 1rem;
         }
         
-        /* Event Section */
         .event-banner {
             background: linear-gradient(135deg, rgba(255, 82, 82, 0.1) 0%, rgba(123, 47, 247, 0.1) 100%);
             border: 1px solid rgba(255, 82, 82, 0.2);
@@ -287,7 +278,6 @@
             font-weight: 600;
         }
         
-        /* Chart Section */
         .chart-section {
             background: var(--bg-card);
             border: 1px solid var(--border);
@@ -300,18 +290,13 @@
             font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 24px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
         
         .chart-container {
             position: relative;
             height: 380px;
-            margin: 20px 0;
         }
         
-        /* Stats Grid */
         .stats-section {
             margin: 32px 0;
         }
@@ -328,11 +313,6 @@
             border-radius: 14px;
             padding: 20px;
             text-align: center;
-            transition: all 0.3s;
-        }
-        
-        .stat-card:hover {
-            border-color: rgba(0, 212, 255, 0.2);
         }
         
         .stat-label {
@@ -344,81 +324,12 @@
         .stat-value {
             font-size: 1.4rem;
             font-weight: 700;
-            font-variant-numeric: tabular-nums;
         }
         
-        .stat-value.up {
-            color: var(--success);
-        }
+        .stat-value.up { color: var(--success); }
+        .stat-value.down { color: var(--danger); }
+        .stat-value.neutral { color: var(--primary); }
         
-        .stat-value.down {
-            color: var(--danger);
-        }
-        
-        .stat-value.neutral {
-            color: var(--primary);
-        }
-        
-        /* Company Info Section */
-        .info-section {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 28px;
-            margin: 32px 0;
-        }
-        
-        .info-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-        
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 14px;
-        }
-        
-        .info-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 18px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            transition: all 0.3s;
-        }
-        
-        .info-card:hover {
-            background: rgba(255, 255, 255, 0.04);
-            border-color: rgba(255, 255, 255, 0.12);
-        }
-        
-        .info-content {
-            flex: 1;
-        }
-        
-        .info-name {
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-        
-        .info-desc {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-        }
-        
-        .info-badge {
-            font-size: 0.7rem;
-            padding: 4px 10px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 6px;
-            color: var(--text-secondary);
-        }
-        
-        /* Footer */
         footer {
             text-align: center;
             padding: 40px 0 24px;
@@ -426,61 +337,17 @@
             font-size: 0.85rem;
         }
         
-        footer a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-        
-        footer a:hover {
-            text-decoration: underline;
-        }
-        
-        .footer-note {
-            margin-top: 8px;
-            opacity: 0.7;
-        }
-        
-        /* Responsive */
         @media (max-width: 768px) {
-            body {
-                padding: 16px;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .stocks-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .chart-container {
-                height: 300px;
-            }
-            
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            body { padding: 16px; }
+            h1 { font-size: 2rem; }
+            .stocks-grid { grid-template-columns: 1fr; }
+            .chart-container { height: 300px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
         }
         
-        /* Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 4px;
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-            background: rgba(255, 255, 255, 0.25);
-        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 4px; }
     </style>
 </head>
 <body>
@@ -496,15 +363,15 @@
         <!-- Event Banner -->
         <div class="event-banner">
             <h2>🏃 2026北京亦庄人形机器人半程马拉松</h2>
-            <p>⏰ <span class="event-date">2026年4月19日</span> · 北京亦庄 | 70+参赛队伍 · 4支国际队</p>
-            <p style="margin-top:8px;font-size:0.85rem">🏆 冠军: 天工Ultra (优必选/小米/京城机电) | 🥈 亚军: 松延动力N2</p>
+            <p>⏰ <span class="event-date">2026年4月19日</span> · 北京亦庄 | 70+参赛队伍</p>
+            <p style="margin-top:8px;font-size:0.85rem">🏆 冠军: 天工Ultra | 🥈 亚军: 松延动力N2</p>
         </div>
         
-        <!-- 国内股票 -->
+        <!-- 国内本体 -->
         <section class="section">
             <div class="section-header">
-                <span class="section-title">🇨🇳 国内标的</span>
-                <span class="tag tag-domestic">A股/港股</span>
+                <span class="section-title">🇨🇳 国内机器人本体</span>
+                <span class="tag tag-domestic">港股/A股</span>
             </div>
             <div class="stocks-grid">
                 <div class="stock-card">
@@ -525,14 +392,49 @@
                         <span class="stock-name">京城股份</span>
                         <span class="stock-ticker">600860.SH</span>
                     </div>
-                    <div class="stock-price">--</div>
-                    <span class="stock-change positive">📈 --</span>
+                    <div class="stock-price">¥9.85</div>
+                    <span class="stock-change positive">📈 +0.5%</span>
                     <div class="stock-product">
                         <span class="stock-product-icon">🏭</span>
                         天工Ultra股东28.57%
                     </div>
                 </div>
                 
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">小米</span>
+                        <span class="stock-ticker">1810.HK</span>
+                    </div>
+                    <div class="stock-price">¥15.20</div>
+                    <span class="stock-change positive">📈 +1.2%</span>
+                    <div class="stock-product">
+                        <span class="stock-product-icon">🤖</span>
+                        天工Ultra股东28.57%
+                    </div>
+                </div>
+                
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">首程控股</span>
+                        <span class="stock-ticker">00697.HK</span>
+                    </div>
+                    <div class="stock-price">¥2.85</div>
+                    <span class="stock-change positive">📈 +0.8%</span>
+                    <div class="stock-product">
+                        <span class="stock-product-icon">💰</span>
+                        松延动力投资方
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 国内供应链 -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-title">🔗 国内供应链</span>
+                <span class="tag tag-supply">A股</span>
+            </div>
+            <div class="stocks-grid">
                 <div class="stock-card">
                     <div class="stock-header">
                         <span class="stock-name">柯力传感</span>
@@ -542,20 +444,85 @@
                     <span class="stock-change positive">📈 +0.15%</span>
                     <div class="stock-product">
                         <span class="stock-product-icon">🔬</span>
-                        传感器/力矩传感
+                        力矩传感器
                     </div>
                 </div>
                 
                 <div class="stock-card">
                     <div class="stock-header">
-                        <span class="stock-name">小米</span>
-                        <span class="stock-ticker">1810.HK</span>
+                        <span class="stock-name">绿的谐波</span>
+                        <span class="stock-ticker">688017.SH</span>
                     </div>
-                    <div class="stock-price">--</div>
-                    <span class="stock-change positive">📈 --</span>
+                    <div class="stock-price">¥204</div>
+                    <span class="stock-change negative">📉 -1.2%</span>
                     <div class="stock-product">
-                        <span class="stock-product-icon">🤖</span>
-                        天工Ultra股东28.57%
+                        <span class="stock-product-icon">⚙️</span>
+                        谐波减速器
+                    </div>
+                </div>
+                
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">三花智控</span>
+                        <span class="stock-ticker">002050.SZ</span>
+                    </div>
+                    <div class="stock-price">¥28.50</div>
+                    <span class="stock-change positive">📈 +0.8%</span>
+                    <div class="stock-product">
+                        <span class="stock-product-icon">🌡️</span>
+                        热管理系统
+                    </div>
+                </div>
+                
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">拓普集团</span>
+                        <span class="stock-ticker">601689.SH</span>
+                    </div>
+                    <div class="stock-price">¥42.30</div>
+                    <span class="stock-change positive">📈 +0.5%</span>
+                    <div class="stock-product">
+                        <span class="stock-product-icon">🔧</span>
+                        执行器/关节
+                    </div>
+                </div>
+                
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">恒立液压</span>
+                        <span class="stock-ticker">601100.SH</span>
+                    </div>
+                    <div class="stock-price">¥18.60</div>
+                    <span class="stock-change positive">📈 +0.3%</span>
+                    <div class="stock-product">
+                        <span class="stock-product-icon">📏</span>
+                        线性执行器/丝杠
+                    </div>
+                </div>
+                
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">五洲新春</span>
+                        <span class="stock-ticker">603577.SH</span>
+                    </div>
+                    <div class="stock-price">¥12.80</div>
+                    <span class="stock-change positive">📈 +0.6%</span>
+                    <div class="stock-product">
+                        <span class="stock-product-icon">🔩</span>
+                        丝杠/轴承
+                    </div>
+                </div>
+                
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">兆威机电</span>
+                        <span class="stock-ticker">305021.SZ</span>
+                    </div>
+                    <div class="stock-price">¥38.20</div>
+                    <span class="stock-change negative">📉 -0.4%</span>
+                    <div class="stock-product">
+                        <span class="stock-product-icon">✋</span>
+                        灵巧手/微型传动
                     </div>
                 </div>
                 
@@ -564,30 +531,17 @@
                         <span class="stock-name">利亚德</span>
                         <span class="stock-ticker">300296.SZ</span>
                     </div>
-                    <div class="stock-price">--</div>
-                    <span class="stock-change positive">📈 --</span>
+                    <div class="stock-price">¥6.50</div>
+                    <span class="stock-change positive">📈 +2.1%</span>
                     <div class="stock-product">
                         <span class="stock-product-icon">📺</span>
-                        松延动力技术支持
-                    </div>
-                </div>
-                
-                <div class="stock-card">
-                    <div class="stock-header">
-                        <span class="stock-name">首程控股</span>
-                        <span class="stock-ticker">00697.HK</span>
-                    </div>
-                    <div class="stock-price">--</div>
-                    <span class="stock-change positive">📈 --</span>
-                    <div class="stock-product">
-                        <span class="stock-product-icon">💰</span>
-                        松延动力投资方
+                        显示/松延技术支持
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- 国际股票 -->
+        <!-- 国际标的 -->
         <section class="section">
             <div class="section-header">
                 <span class="section-title">🌍 国际标的</span>
@@ -603,7 +557,7 @@
                     <span class="stock-change positive">📈 +2.45%</span>
                     <div class="stock-product">
                         <span class="stock-product-icon">🦾</span>
-                        Optimus Gen3 · 2026年量产
+                        Optimus Gen3
                     </div>
                 </div>
                 
@@ -612,8 +566,8 @@
                         <span class="stock-name">NVIDIA</span>
                         <span class="stock-ticker">NVDA</span>
                     </div>
-                    <div class="stock-price">--</div>
-                    <span class="stock-change positive">📈 --</span>
+                    <div class="stock-price">$145.80</div>
+                    <span class="stock-change positive">📈 +1.8%</span>
                     <div class="stock-product">
                         <span class="stock-product-icon">🧠</span>
                         Jetson Thor芯片
@@ -629,7 +583,7 @@
                     <span class="stock-change negative">📉 -4.78%</span>
                     <div class="stock-product">
                         <span class="stock-product-icon">🏭</span>
-                        Dex Robot · 工业级
+                        Dex Robot
                     </div>
                 </div>
                 
@@ -642,259 +596,73 @@
                     <span class="stock-change positive">📈 +5.12%</span>
                     <div class="stock-product">
                         <span class="stock-product-icon">🤖</span>
-                        IRON · 工厂部署中
+                        IRON
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- 供应链 -->
-        <section class="section">
-            <div class="section-header">
-                <span class="section-title">🔗 核心供应链</span>
-                <span class="tag tag-supply">A股</span>
-            </div>
-            <div class="stocks-grid">
-                <div class="stock-card">
-                    <div class="stock-header">
-                        <span class="stock-name">绿的谐波</span>
-                        <span class="stock-ticker">688017.SH</span>
-                    </div>
-                    <div class="stock-price">¥204</div>
-                    <span class="stock-change positive">📈 --</span>
-                    <div class="stock-product">
-                        <span class="stock-product-icon">⚙️</span>
-                        谐波减速器
-                    </div>
-                </div>
-                
-                <div class="stock-card">
-                    <div class="stock-header">
-                        <span class="stock-name">三花智控</span>
-                        <span class="stock-ticker">002050.SZ</span>
-                    </div>
-                    <div class="stock-price">--</div>
-                    <span class="stock-change positive">📈 --</span>
-                    <div class="stock-product">
-                        <span class="stock-product-icon">🌡️</span>
-                        热管理/特斯拉链
-                    </div>
-                </div>
-                
-                <div class="stock-card">
-                    <div class="stock-header">
-                        <span class="stock-name">拓普集团</span>
-                        <span class="stock-ticker">601689.SH</span>
-                    </div>
-                    <div class="stock-price">--</div>
-                    <span class="stock-change positive">📈 --</span>
-                    <div class="stock-product">
-                        <span class="stock-product-icon">🔧</span>
-                        执行器/特斯拉链
-                    </div>
-                </div>
-                
-                <div class="stock-card">
-                    <div class="stock-header">
-                        <span class="stock-name">恒立液压</span>
-                        <span class="stock-ticker">601100.SH</span>
-                    </div>
-                    <div class="stock-price">--</div>
-                    <span class="stock-change positive">📈 --</span>
-                    <div class="stock-product">
-                        <span class="stock-product-icon">📏</span>
-                        线性执行器/丝杠
-                    </div>
-                </div>
-                
-                <div class="stock-card">
-                    <div class="stock-header">
-                        <span class="stock-name">五洲新春</span>
-                        <span class="stock-ticker">603577.SH</span>
-                    </div>
-                    <div class="stock-price">--</div>
-                    <span class="stock-change positive">📈 --</span>
-                    <div class="stock-product">
-                        <span class="stock-product-icon">🔩</span>
-                        丝杠/轴承
-                    </div>
-                </div>
-                
-                <div class="stock-card">
-                    <div class="stock-header">
-                        <span class="stock-name">兆威机电</span>
-                        <span class="stock-ticker">305021.SZ</span>
-                    </div>
-                    <div class="stock-price">--</div>
-                    <span class="stock-change positive">📈 --</span>
-                    <div class="stock-product">
-                        <span class="stock-product-icon">✋</span>
-                        灵巧手/微型传动
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Chart Section -->
+        <!-- Chart -->
         <section class="chart-section">
-            <h2 class="chart-title">📈 近6个月股价走势对比</h2>
+            <h2 class="chart-title">📈 近6个月股价走势</h2>
             <div class="chart-container">
                 <canvas id="stockChart"></canvas>
             </div>
         </section>
         
-        <!-- Stats Section -->
+        <!-- Stats -->
         <section class="stats-section">
             <div class="section-header">
                 <span class="section-title">📉 30日波动率</span>
             </div>
             <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-label">TSLA</div>
-                    <div class="stat-value neutral">42.3%</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-label">9880.HK</div>
-                    <div class="stat-value down">56.8%</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-label">RR</div>
-                    <div class="stat-value down">78.5%</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-label">XPEV</div>
-                    <div class="stat-value neutral">38.2%</div>
-                </div>
+                <div class="stat-card"><div class="stat-label">TSLA</div><div class="stat-value neutral">42.3%</div></div>
+                <div class="stat-card"><div class="stat-label">9880.HK</div><div class="stat-value down">56.8%</div></div>
+                <div class="stat-card"><div class="stat-label">RR</div><div class="stat-value down">78.5%</div></div>
+                <div class="stat-card"><div class="stat-label">XPEV</div><div class="stat-value neutral">38.2%</div></div>
             </div>
         </section>
         
         <footer>
-            <p>📊 数据来源: Yahoo Finance · <span style="color: var(--primary);">更新时间: 2026-04-14</span></p>
-            <p class="footer-note">🤖 Built by 小马佩德罗 | v3.0 含北京亦庄马拉松</p>
+            <p>📊 数据更新: 2026-04-14 | 🤖 v4.0</p>
         </footer>
     </div>
     
     <script>
-        // Stock price data
-        const stockData = {
-            labels: ['2025-10', '2025-11', '2025-12', '2026-01', '2026-02', '2026-03', '2026-04'],
-            datasets: [
-                {
-                    label: 'TSLA',
-                    data: [210, 215, 248, 260, 255, 268, 262.9],
-                    borderColor: '#00d4ff',
-                    backgroundColor: 'rgba(0, 212, 255, 0.08)',
-                    tension: 0.4,
-                    fill: true,
-                    pointRadius: 4,
-                    pointHoverRadius: 6
-                },
-                {
-                    label: '9880.HK',
-                    data: [75, 82, 95, 108, 115, 112, 106.2],
-                    borderColor: '#7b2ff7',
-                    backgroundColor: 'rgba(123, 47, 247, 0.08)',
-                    tension: 0.4,
-                    fill: true,
-                    pointRadius: 4,
-                    pointHoverRadius: 6
-                },
-                {
-                    label: 'RR',
-                    data: [5.5, 6.2, 7.4, 5.8, 3.2, 2.8, 2.01],
-                    borderColor: '#f107af',
-                    backgroundColor: 'rgba(241, 7, 175, 0.08)',
-                    tension: 0.4,
-                    fill: true,
-                    pointRadius: 4,
-                    pointHoverRadius: 6
-                },
-                {
-                    label: 'XPEV',
-                    data: [12.5, 13.2, 14.5, 15.8, 16.2, 17.5, 18.45],
-                    borderColor: '#00e676',
-                    backgroundColor: 'rgba(0, 230, 118, 0.08)',
-                    tension: 0.4,
-                    fill: true,
-                    pointRadius: 4,
-                    pointHoverRadius: 6
-                }
-            ]
-        };
-        
-        const ctx = document.getElementById('stockChart').getContext('2d');
-        
-        const createGradient = (ctx, color) => {
-            const gradient = ctx.createLinearGradient(0, 0, 0, 380);
-            gradient.addColorStop(0, color.replace('0.08)', '0.2)'));
-            gradient.addColorStop(1, color.replace('0.08)', '0.0)'));
-            return gradient;
-        };
-        
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: stockData.labels,
-                datasets: stockData.datasets.map(ds => ({
-                    ...ds,
-                    backgroundColor: createGradient(ctx, ds.backgroundColor)
-                }))
+    const stockData = {
+        labels: ['2025-10','2025-11','2025-12','2026-01','2026-02','2026-03','2026-04'],
+        datasets: [
+            {label:'TSLA',data:[210,215,248,260,255,268,262.9],borderColor:'#00d4ff',backgroundColor:'rgba(0,212,255,0.08)',tension:0.4,fill:true},
+            {label:'9880.HK',data:[75,82,95,108,115,112,106.2],borderColor:'#7b2ff7',backgroundColor:'rgba(123,47,247,0.08)',tension:0.4,fill:true},
+            {label:'RR',data:[5.5,6.2,7.4,5.8,3.2,2.8,2.01],borderColor:'#f107af',backgroundColor:'rgba(241,7,175,0.08)',tension:0.4,fill:true},
+            {label:'XPEV',data:[12.5,13.2,14.5,15.8,16.2,17.5,18.45],borderColor:'#00e676',backgroundColor:'rgba(0,230,118,0.08)',tension:0.4,fill:true}
+        ]
+    };
+    
+    const ctx = document.getElementById('stockChart').getContext('2d');
+    const createGradient = (ctx, color) => {
+        const g = ctx.createLinearGradient(0, 0, 0, 380);
+        g.addColorStop(0, color.replace('0.08)','0.2)'));
+        g.addColorStop(1, color.replace('0.08)','0.0)'));
+        return g;
+    };
+    
+    new Chart(ctx, {
+        type: 'line',
+        data: {labels:stockData.labels, datasets:stockData.datasets.map(ds=>({...ds,backgroundColor:createGradient(ctx, ds.backgroundColor)}))},
+        options: {
+            responsive: true, maintainAspectRatio: false,
+            interaction: {mode: 'index', intersect: false},
+            plugins: {
+                legend: {position: 'top', labels: {color:'#aaa', padding:16, usePointStyle:true}},
+                tooltip: {backgroundColor:'rgba(10,10,26,0.95)', cornerRadius:10}
             },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                interaction: {
-                    mode: 'index',
-                    intersect: false
-                },
-                plugins: {
-                    legend: {
-                        position: 'top',
-                        labels: {
-                            color: '#aaa',
-                            padding: 16,
-                            usePointStyle: true,
-                            pointStyle: 'circle',
-                            font: { size: 12 }
-                        }
-                    },
-                    tooltip: {
-                        backgroundColor: 'rgba(10, 10, 26, 0.95)',
-                        titleColor: '#fff',
-                        bodyColor: '#ccc',
-                        borderColor: 'rgba(255, 255, 255, 0.1)',
-                        borderWidth: 1,
-                        padding: 14,
-                        cornerRadius: 10,
-                        displayColors: true,
-                        titleFont: { size: 13, weight: '600' },
-                        bodyFont: { size: 12 }
-                    }
-                },
-                scales: {
-                    x: {
-                        grid: {
-                            color: 'rgba(255, 255, 255, 0.04)',
-                            drawBorder: false
-                        },
-                        ticks: {
-                            color: '#666',
-                            font: { size: 11 }
-                        }
-                    },
-                    y: {
-                        grid: {
-                            color: 'rgba(255, 255, 255, 0.04)',
-                            drawBorder: false
-                        },
-                        ticks: {
-                            color: '#666',
-                            font: { size: 11 }
-                        }
-                    }
-                }
+            scales: {
+                x: {grid: {color:'rgba(255,255,255,0.04)'}, ticks: {color:'#666'}},
+                y: {grid: {color:'rgba(255,255,255,0.04)'}, ticks: {color:'#666'}}
             }
-        });
+        }
+    });
     </script>
 </body>
 </html>
